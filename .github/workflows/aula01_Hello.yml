@@ -1,0 +1,13 @@
+name: "Wf Data de Hoje"
+
+on:
+  push:
+    
+jobs:
+  print_date:
+    name: Olá dia de hoje
+    runs-on: unbuntu-latest
+    
+    steps:
+      - name: Olá dia de hoje
+        run: 'date"
