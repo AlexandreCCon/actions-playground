@@ -10,4 +10,4 @@ jobs:
     
     steps:
       - name: Olá dia de hoje
-        run: 'date"
+        run: 'date'
