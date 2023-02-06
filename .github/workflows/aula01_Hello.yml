@@ -1,13 +1,45 @@
-name: "Wf Data de Hoje"
+name: "WF Data de hoje - aula 01"
 
 on:
   push:
-    
+  
 jobs:
-  print_date:
-    name: Olá dia de hoje
-    runs-on: unbuntu-latest
+  print_date_hoje_unbuntu:
+    name: Print Data de Hoje Unbuntu!
+    runs-on: ubuntu-latest
     
     steps:
-      - name: Olá dia de hoje
+      - name: Print Data de Hoje Unbuntu!
         run: 'date'
+        
+  print_date_hoje_windows:
+    name: Print Data de Hoje Windows!
+    runs-on: windows-latest
+    
+    steps:
+      - name: Print Data de Hoje Windows!
+        run: 'date'
+        
+  print_data_hoje_macos:
+    name: Print Data de Hoje MacOS!
+    runs-on: macos-latest
+        
+    steps:
+      - name: Print Data de Hoje MacOs!
+        run: 'date'
+        
+  print_data_fim:
+    name: Print Data de Hoje Final
+    runs-on: unbunt-latest
+    
+    needs:
+      - print_date_hoje_unbuntu
+      - print_date_hoje_windows
+      - print_data_hoje_macos
+    
+    steps:
+      - name: Print Data de Hoje Final
+        run: 'date'
+      
+      
+    
